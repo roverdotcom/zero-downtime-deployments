@@ -9,3 +9,5 @@ essential-packages:
       - bash
       - git
       - tmux
+      - siege
+      - curl
