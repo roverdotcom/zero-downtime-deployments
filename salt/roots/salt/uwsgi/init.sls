@@ -28,6 +28,13 @@ uwsgi:
     - require:
       - pip: uwsgi
         
+/etc/init/uwsgi-worker.conf:
+  file.managed:
+    - source: salt://uwsgi/uwsgi-worker.conf
+    - template: jinja
+    - require:
+      - pip: uwsgi
+        
 /etc/init/uwsgi-zergpool.conf:
   file.managed:
     - source: salt://uwsgi/uwsgi-zergpool.conf
