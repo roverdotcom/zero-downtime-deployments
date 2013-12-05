@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# check root permissions
+if [[ $UID != 0 ]]; then
+    echo "Please start the script as root or sudo!"
+    exit 1
+fi
+
 VERSION=$1
 APP_ROOT=/vagrant/demo_project
 
