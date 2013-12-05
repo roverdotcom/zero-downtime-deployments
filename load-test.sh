@@ -1,4 +1,4 @@
 #!/bin/bash
 
-siege http://localhost:8080 -t 5
+siege http://localhost:80 -c 4
 
